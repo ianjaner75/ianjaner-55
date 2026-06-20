@@ -21,6 +21,15 @@ export default defineConfig({
   nitro: isGitHubPages
     ? {
         preset: "static",
+        baseURL: base,
+        output: {
+          publicDir: "dist",
+          serverDir: ".output/server",
+        },
+        prerender: {
+          routes: ["/"],
+          crawlLinks: false,
+        },
       }
     : undefined,
   tanstackStart: {
@@ -29,6 +38,7 @@ export default defineConfig({
     server: { entry: "server" },
   },
 });
+
 
 
 
