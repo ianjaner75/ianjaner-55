@@ -7,8 +7,8 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 const base = process.env.GH_PAGES_BASE || process.env.BASE_PATH || "/";
-// GitHub Pages needs a static Vite-only build, so we disable Nitro/SSR there.
-// Lovable builds still run with the default Nitro setup when no GH_PAGES_BASE is set.
+// GitHub Pages needs a static, prerendered site. Force Nitro to the static preset
+// when a GitHub Pages base path is set, otherwise keep the default Lovable/Cloudflare setup.
 const isGitHubPages = Boolean(process.env.GH_PAGES_BASE || process.env.BASE_PATH);
 
 export default defineConfig({
@@ -18,12 +18,17 @@ export default defineConfig({
       outDir: "dist",
     },
   },
-  nitro: isGitHubPages ? false : undefined,
+  nitro: isGitHubPages
+    ? {
+        preset: "static",
+      }
+    : undefined,
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
     server: { entry: "server" },
   },
 });
+
 
 
