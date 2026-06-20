@@ -34,9 +34,10 @@ jobs:
         run: bun install
 
       - name: Build for GitHub Pages
-        run: bunx vite build --config vite.config.gh.ts
+        run: bun run build:gh
         env:
           GH_PAGES_BASE: ${{ steps.pages.outputs.base_path }}
+
 
       - name: Move index.html to root
         run: |
