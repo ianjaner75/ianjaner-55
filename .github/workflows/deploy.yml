@@ -38,10 +38,16 @@ jobs:
         env:
           GH_PAGES_BASE: ${{ steps.pages.outputs.base_path }}
 
+      - name: Move index.html to root
+        run: |
+          mv dist/gh-pages/index.html dist/index.html
+          rmdir dist/gh-pages 2>/dev/null || rm -rf dist/gh-pages
+
       - name: Verify build output
         run: |
           test -f dist/index.html || (echo "dist/index.html not found" && exit 1)
           echo "Build output verified at dist/index.html"
+
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
