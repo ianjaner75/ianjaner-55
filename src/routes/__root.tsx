@@ -81,10 +81,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "description", content: "Portafolio de Ianjaner Beltran, Desarrollador Backend Junior especializado en Java, Spring Boot y arquitectura de microservicios." },
       { name: "author", content: "Ianjaner Beltran" },
       { property: "og:title", content: "Ianjaner Beltran — Backend Developer" },
-      { property: "og:description", content: "Java · Spring Boot · Microservicios · Cloud. Ponente internacional CICOM 2025." },
+      { property: "og:description", content: "Portafolio de Ianjaner Beltran, Desarrollador Backend Junior especializado en Java, Spring Boot y arquitectura de microservicios." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Ianjaner Beltran — Backend Developer" },
+      { name: "twitter:description", content: "Portafolio de Ianjaner Beltran, Desarrollador Backend Junior especializado en Java, Spring Boot y arquitectura de microservicios." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e158afd5-0b5a-402f-a290-83753bb69993/id-preview-fc263f08--be2f3cc0-092b-428e-8c27-5a5fbccf899e.lovable.app-1781936056772.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e158afd5-0b5a-402f-a290-83753bb69993/id-preview-fc263f08--be2f3cc0-092b-428e-8c27-5a5fbccf899e.lovable.app-1781936056772.png" },
     ],
     links: [
       {
