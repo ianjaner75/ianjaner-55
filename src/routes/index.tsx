@@ -291,7 +291,7 @@ function Index() {
             <a href="https://github.com/ianjaner75" target="_blank" rel="noreferrer" className="transition hover:text-accent">
               <Github className="h-5 w-5" />
             </a>
-            <a href="https://linkedin.com/in/ianjanerbeltran" target="_blank" rel="noreferrer" className="transition hover:text-primary">
+            <a href="https://www.linkedin.com/in/ianjaner-beltran/" target="_blank" rel="noreferrer" className="transition hover:text-primary">
               <Linkedin className="h-5 w-5" />
             </a>
             <a href="mailto:ianjaner55@gmail.com" className="transition hover:text-accent">
@@ -496,8 +496,8 @@ function Index() {
               <ContactRow icon={Phone} label="+57 313 262 6226" href="tel:+573132626226" />
               <ContactRow
                 icon={Linkedin}
-                label="linkedin.com/in/ianjanerbeltran"
-                href="https://linkedin.com/in/ianjanerbeltran"
+                label="linkedin.com/in/ianjaner-beltran"
+                href="https://www.linkedin.com/in/ianjaner-beltran/"
               />
               <ContactRow icon={Github} label="github.com/ianjaner75" href="https://github.com/ianjaner75" />
             </div>
